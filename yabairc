@@ -1,0 +1,102 @@
+#   ██╗   ██╗ █████╗ ██████╗  █████╗ ██╗
+#   ╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗██║
+#    ╚████╔╝ ███████║██████╔╝███████║██║
+#     ╚██╔╝  ██╔══██║██╔══██╗██╔══██║██║
+#      ██║   ██║  ██║██████╔╝██║  ██║██║
+#      ╚═╝   ╚═╝  ╚═╝╚═════╝ ╚═╝  ╚═╝╚═╝
+#                                    
+#                        - Kodys Config                                              
+
+
+# ====== Tiling settings ===================================
+
+gaps_size="20"
+
+yabai -m config layout                      float
+
+yabai -m config top_padding                 "${gaps_size}"
+yabai -m config bottom_padding              "${gaps_size}"
+yabai -m config left_padding                "${gaps_size}"
+yabai -m config right_padding               "${gaps_size}"
+yabai -m config window_gap                  "${gaps_size}"
+
+yabai -m config mouse_follows_focus         off
+yabai -m config focus_follows_mouse         off
+
+yabai -m config mouse_modifier              fn
+yabai -m config mouse_action1               move
+yabai -m config mouse_action2               resize
+
+yabai -m config window_topmost              on
+yabai -m config window_opacity              off
+yabai -m config window_shadow               on
+
+yabai -m config active_window_opacity       1.0
+yabai -m config normal_window_opacity       0.9
+yabai -m config split_ratio                 0.5
+yabai -m config auto_balance                off
+
+# ====== Border Settings=====================================
+
+border_color="171717"
+
+#yabai -m config window_border                on
+yabai -m config window_border_width          5
+yabai -m config active_window_border_color   "0xE0${border_color}"
+yabai -m config normal_window_border_color   "0xE0${border_color}"
+yabai -m config insert_window_border_color   "0xE0${border_color}"
+
+
+# ====== List of rules =====================================
+
+yabai -m rule --add label="Finder" app="^Finder$" title="(Co(py|nnect)|Move|Info|Pref)" manage=off
+yabai -m rule --add label="Safari" app="^Safari$" title="^(General|(Tab|Password|Website|Extension)s|AutoFill|Se(arch|curity)|Privacy|Advance)$" manage=off
+yabai -m rule --add label="System Preferences" app="^System Preferences$" manage=off
+yabai -m rule --add label="Activity Monitor" app="^Activity Monitor$" manage=off
+yabai -m rule --add label="KeePassXC" app="^KeePassXC$" manage=off
+yabai -m rule --add label="Calculator" app="^Calculator$" manage=off
+yabai -m rule --add label="Dictionary" app="^Dictionary$" manage=off
+yabai -m rule --add label="The Unarchiver" app="^The Unarchiver$" manage=off
+yabai -m rule --add label="VirtualBox" app="^VirtualBox$" manage=off
+# yabai -m rule --add label="mpv" app="^mpv$" manage=off
+
+defaults write com.apple.finder DisableAllAnimations -bool true
+killall Finder # or logout and login
+
+# Disable All Mac Animations:
+defaults write -g NSAutomaticWindowAnimationsEnabled -bool false
+defaults write -g NSScrollAnimationEnabled -bool false
+defaults write -g NSWindowResizeTime -float 0.001
+defaults write -g QLPanelAnimationDuration -float 0
+defaults write -g NSScrollViewRubberbanding -bool false
+defaults write -g NSDocumentRevisionsWindowTransformAnimation -bool false
+defaults write -g NSToolbarFullScreenAnimationDuration -float 0
+defaults write -g NSBrowserColumnAnimationSpeedMultiplier -float 0
+defaults write com.apple.dock autohide-time-modifier -float 0
+defaults write com.apple.dock autohide-delay -float 0
+defaults write com.apple.dock expose-animation-duration -float 0
+defaults write com.apple.dock springboard-show-duration -float 0
+defaults write com.apple.dock springboard-hide-duration -float 0
+defaults write com.apple.dock springboard-page-duration -float 0
+defaults write com.apple.finder DisableAllAnimations -bool true
+defaults write com.apple.Mail DisableSendAnimations -bool true
+defaults write com.apple.Mail DisableReplyAnimations -bool true
+
+# Undo Changes:
+#defaults delete -g NSAutomaticWindowAnimationsEnabled
+#defaults delete -g NSScrollAnimationEnabled
+#defaults delete -g NSWindowResizeTime
+#defaults delete -g QLPanelAnimationDuration
+#defaults delete -g NSScrollViewRubberbanding
+#defaults delete -g NSDocumentRevisionsWindowTransformAnimation
+#defaults delete -g NSToolbarFullScreenAnimationDuration
+#defaults delete -g NSBrowserColumnAnimationSpeedMultiplier
+#defaults delete com.apple.dock autohide-time-modifier
+#defaults delete com.apple.dock autohide-delay
+#defaults delete com.apple.dock expose-animation-duration
+#defaults delete com.apple.dock springboard-show-duration
+#defaults delete com.apple.dock springboard-hide-duration
+#defaults delete com.apple.dock springboard-page-duration
+#defaults delete com.apple.finder DisableAllAnimations
+#defaults delete com.apple.Mail DisableSendAnimations
+#defaults delete com.apple.Mail DisableReplyAnimations
