@@ -1,2 +1,5 @@
-# Personal dotfiles for Yabai & SKHD.
+# Personal dotfiles
+
+- Yabai
+- SKHD
  
