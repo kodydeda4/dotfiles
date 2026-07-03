@@ -36,6 +36,21 @@
                         ]
                     },
                     {
+                        "description": "Print Screen → Screenshot (Cmd+Shift+4)",
+                        "manipulators": [
+                            {
+                                "from": { "key_code": "print_screen" },
+                                "to": [
+                                    {
+                                        "key_code": "4",
+                                        "modifiers": ["left_command", "left_shift"]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
                         "description": "Hyper + 1 → Open Brave Profile 1",
                         "manipulators": [
                             {
