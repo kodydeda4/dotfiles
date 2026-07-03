@@ -21,6 +21,21 @@
                         ]
                     },
                     {
+                        "description": "F4 → Application Windows (Exposé)",
+                        "manipulators": [
+                            {
+                                "from": { "key_code": "f4" },
+                                "to": [
+                                    {
+                                        "key_code": "down_arrow",
+                                        "modifiers": ["left_control"]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
                         "description": "Hyper + 1 → Open Brave Profile 1",
                         "manipulators": [
                             {
@@ -462,13 +477,7 @@
                         "product_id": 10203,
                         "vendor_id": 5824
                     },
-                    "ignore": true,
-                    "simple_modifications": [
-                        {
-                            "from": { "key_code": "f3" },
-                            "to": [{ "key_code": "mission_control" }]
-                        }
-                    ]
+                    "ignore": true
                 },
                 {
                     "identifiers": {
@@ -504,13 +513,28 @@
                         "vendor_id": 13364
                     },
                     "ignore": false
+                },
+                {
+                    "identifiers": {
+                        "is_keyboard": true,
+                        "is_pointing_device": true,
+                        "product_id": 2864,
+                        "vendor_id": 13364
+                    },
+                    "ignore": false,
+                    "simple_modifications": [
+                        {
+                            "from": { "key_code": "left_option" },
+                            "to": [{ "key_code": "left_command" }]
+                        },
+                        {
+                            "from": { "key_code": "left_command" },
+                            "to": [{ "key_code": "left_option" }]
+                        }
+                    ]
                 }
             ],
             "fn_function_keys": [
-                {
-                    "from": { "key_code": "f4" },
-                    "to": [{ "apple_vendor_keyboard_key_code": "dashboard" }]
-                },
                 {
                     "from": { "key_code": "f5" },
                     "to": [{ "apple_vendor_keyboard_key_code": "spotlight" }]
@@ -519,6 +543,10 @@
             "name": "Default profile",
             "selected": true,
             "simple_modifications": [
+                {
+                    "from": { "key_code": "f3" },
+                    "to": [{ "key_code": "mission_control" }]
+                },
                 {
                     "from": { "key_code": "insert" },
                     "to": [{ "key_code": "caps_lock" }]
