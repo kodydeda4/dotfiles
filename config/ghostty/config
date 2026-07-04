@@ -1,4 +1,6 @@
+#----------------------------------
 # ghostty.
+#----------------------------------
 # theme = dark:oled-rose-pine,light:catppuccin-latte.conf
 theme = dark:atom-one-dark-oled.conf, light:catppuccin-latte.conf
 # theme = dark:TokyoNight, light:TokyoNight Day
@@ -13,32 +15,21 @@ unfocused-split-opacity = 0.75
 confirm-close-surface = false
 window-width = 100
 window-height = 30
+window-padding-x = 20
+window-padding-y = 10, 20
 
-# keybindings
-keybind = cmd+shift+equal=increase_font_size:1
-# keybind = ctrl+e=new_split:right
-#
-# keybind = ctrl+cmd+h=new_split:left
-# keybind = ctrl+cmd+j=new_split:down
-### keybind = ctrl+cmd+k=new_split:top
-# keybind = ctrl+cmd+l=new_split:right
-
-# keybind = alt+h=goto_split:left
-# keybind = alt+j=goto_split:bottom
-# keybind = alt+k=goto_split:top
-# keybind = alt+l=goto_split:right
-#
-# keybind = ctrl+alt+h=resize_split:left,10
-# keybind = ctrl+alt+j=resize_split:down,10
-# keybind = ctrl+alt+k=resize_split:up,10
-# keybind = ctrl+alt+l=resize_split:right,10
-#
+#----------------------------------
 # macOS specific features
+#----------------------------------
 macos-titlebar-style = tabs
+# macos-titlebar-style = hidden
 macos-option-as-alt = true 
-# window-save-state = always
 window-vsync = true
 window-colorspace = display-p3
 title = " "
 
+#----------------------------------
+# keybindings
+#----------------------------------
+keybind = cmd+shift+equal=increase_font_size:1
 
