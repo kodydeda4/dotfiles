@@ -69,6 +69,7 @@ alias xwal="/opt/xcwal/; python3 xcwal.py"
 alias bonsai="cbonsai --seed 119 --live"
 alias fixaudio="sudo killall coreaudiod; killall mpd; mpd_start"
 alias ip-address="ipconfig getifaddr en0"
+alias xmacros="defaults write com.apple.dt.Xcode IDEPackageEnablePrebuilts YES"
 
 # apps
 alias gg="lazygit"
@@ -134,7 +135,7 @@ youtube-dl() {
   yt-dlp -f bestaudio \
     --extract-audio --audio-format m4a --audio-quality 0 \
     --embed-metadata --embed-thumbnail --convert-thumbnails jpg \
-    -o "$HOME/Music/Music/Music/Downloads/youtube-dl/%(playlist_title,NA)s/%(track_number,00)02d - %(title)s.%(ext)s" "$1"
+    -o "$HOME/Music/kodydeda/Music/Downloads/youtube-dl/%(playlist_title,NA)s/%(track_number,00)02d - %(title)s.%(ext)s" "$1"
 }
 
 #========================================================================
