@@ -138,6 +138,10 @@ youtube-dl() {
     -o "$HOME/Music/kodydeda/Music/Downloads/youtube-dl/%(playlist_title,NA)s/%(track_number,00)02d - %(title)s.%(ext)s" "$1"
 }
 
+# Youtube Download Example:
+# Download 
+# yt-dlp --download-sections "*18:31-18:48" "https://www.youtube.com/watch?v=l84U8QFKIF0"
+
 #========================================================================
 # tmux
 #========================================================================
