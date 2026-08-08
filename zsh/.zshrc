@@ -139,8 +139,12 @@ youtube-dl() {
 }
 
 # Youtube Download Example:
-# Download 
-# yt-dlp --download-sections "*18:31-18:48" "https://www.youtube.com/watch?v=l84U8QFKIF0"
+# Download a video mov between a certain timestamp.
+# yt-dlp --download-sections "*00:18:31-00:18:48" \
+#   --remux-video mov \
+#   -P "~/Downloads" \
+#   -o "%(title)s.%(ext)s" \
+#   "https://www.youtube.com/watch?v=l84U8QFKIF0"
 
 #========================================================================
 # tmux
