@@ -139,9 +139,9 @@ youtube-dl() {
 }
 
 # Youtube Download Example:
-# Download a video mov between a certain timestamp.
+# Download a video mp4 between a certain timestamp.
 # yt-dlp --download-sections "*00:18:31-00:18:48" \
-#   --remux-video mov \
+#   --remux-video mp4 \
 #   -P "~/Downloads" \
 #   -o "%(title)s.%(ext)s" \
 #   "https://www.youtube.com/watch?v=l84U8QFKIF0"

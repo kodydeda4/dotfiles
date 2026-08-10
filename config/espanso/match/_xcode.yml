@@ -119,7 +119,14 @@ matches:
   - trigger: "priview"
     word: false
     replace: "private func content() -> some View {\n}"
-    
+
+  #---------------------------------------------------------------
+  # private func toolbar() -> some View { }
+  #---------------------------------------------------------------
+  - trigger: "toolbar()"
+    word: false
+    replace: "@ToolbarContentBuilder\nprivate func toolbar() -> some ToolbarContent {\n}"
+
   #---------------------------------------------------------------
   # .foregroundColor(
   #---------------------------------------------------------------
