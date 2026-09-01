@@ -1,5 +1,5 @@
 #!/bin/bash
 
 # SwiftFormat
-swiftformat ~/Developer/foresightcares/swift-ava-app
-swiftformat ~/Developer/kody/swift/music-player
+swiftformat ~/Developer/foresightcares/swift/swift-ava-app
+swiftformat ~/Developer/kody/swift/redfin-swift
