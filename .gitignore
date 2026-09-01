@@ -6,3 +6,6 @@ config/mpd/mpd/database
 config/mpd/mpd/log
 config/mpd/mpd/mpd.log
 config/mpd/mpd/state
+
+# Raycast-managed installed extension data (compiled JS, assets, binaries)
+config/raycast/extensions/
