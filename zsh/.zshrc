@@ -70,6 +70,7 @@ alias bonsai="cbonsai --seed 119 --live"
 alias fixaudio="sudo killall coreaudiod; killall mpd; mpd_start"
 alias ip-address="ipconfig getifaddr en0"
 alias xmacros="defaults write com.apple.dt.Xcode IDEPackageEnablePrebuilts YES"
+alias xmacrosOff="defaults write com.apple.dt.Xcode IDEPackageEnablePrebuilts NO"
 
 # apps
 alias gg="lazygit"
@@ -101,10 +102,10 @@ alias sw="cd ~/Developer/kody/swift; r"
 alias web="cd ~/Developer/kody/web; r"
 
 ## scripts
-alias sss="~/Developer/kody/dotfiles/scripts/sss"
-alias fpr="~/Developer/kody/dotfiles/scripts/fpr"
-alias xcm="~/Developer/kody/dotfiles/scripts/xcm"
-alias icons="sudo -H ~/Developer/kody/dotfiles/scripts/icons"
+alias sss="~/Developer/kody/kody/dotfiles/scripts/sss"
+alias fpr="~/Developer/kody/kody/dotfiles/scripts/fpr"
+alias xcm="~/Developer/kody/kody/dotfiles/scripts/xcm"
+alias icons="sudo -H ~/Developer/kody/kody/dotfiles/scripts/icons"
 
 #========================================================================
 # zoxide

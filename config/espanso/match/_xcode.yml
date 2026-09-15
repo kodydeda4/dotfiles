@@ -20,6 +20,10 @@ matches:
     word: false
     replace: "@Dependency(\\.aws) var aws"
 
+  - trigger: "feedback()"
+    word: false
+    replace: "@Dependency(\\.hapticFeedback) var hapticFeedback"
+
   - trigger: "ann()"
     word: false
     replace: "@Dependency(\\.analytics) var analytics"
