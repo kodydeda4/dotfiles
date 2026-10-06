@@ -108,11 +108,6 @@ alias xcm="~/Developer/kody/kody/dotfiles/scripts/xcm"
 alias icons="sudo -H ~/Developer/kody/kody/dotfiles/scripts/icons"
 
 #========================================================================
-# zoxide
-#========================================================================
-eval "$(zoxide init zsh)"
-
-#========================================================================
 # yazi
 #========================================================================
 
@@ -166,5 +161,7 @@ export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
 export PATH="/opt/homebrew/lib/ruby/gems/3.4.0/bin:$PATH"
 export PATH="/opt/homebrew/opt/rustup/bin:$HOME/.cargo/bin:$PATH"
 
-
-
+#========================================================================
+# zoxide (must stay last)
+#========================================================================
+eval "$(zoxide init zsh)"

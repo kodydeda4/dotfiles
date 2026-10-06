@@ -7,6 +7,11 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "format_on_save": "off",
+  "indent_guides": {
+    "enabled": true
+  },
+  "hard_tabs": false,
   "ui_font_family": "SF Pro",
   "agent_ui_font_family": "SF Pro",
   "buffer_font_family": "SF Mono",
@@ -20,7 +25,7 @@
     "code_font_family": "SF Mono"
   },
   "terminal": {
-    
+    "font_family": "MesloLGL Nerd Font Mono"
   },
   "tab_size": 2,
   "agent_servers": {

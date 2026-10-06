@@ -1,0 +1,35 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "guitar-pro-web",
+      "runtimeExecutable": "/bin/zsh",
+      "runtimeArgs": [
+        "-c",
+        "export PATH=\"/opt/homebrew/opt/rustup/bin:$HOME/.cargo/bin:$PATH\"; cd /Users/kodydeda/Developer/kody/guitar-pro/guitar-pro-rs && dx serve --package web --platform web --port 8081 --open false"
+      ],
+      "port": 8081
+    },
+    {
+      "name": "score-bridge-test",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8090",
+        "--directory",
+        "/private/tmp/claude-501/-Users-kodydeda-Developer-kody-kody-dotfiles/c9633547-ced3-46db-87f0-c1fe52297f17/scratchpad/scoretest"
+      ],
+      "port": 8090
+    },
+    {
+      "name": "guitar-pro-web-csr",
+      "runtimeExecutable": "/bin/zsh",
+      "runtimeArgs": [
+        "-c",
+        "export PATH=\"/opt/homebrew/opt/rustup/bin:$HOME/.cargo/bin:$PATH\"; cd /Users/kodydeda/Developer/kody/guitar-pro/guitar-pro-rs && dx serve --package web --platform web --fullstack false --port 8082 --open false"
+      ],
+      "port": 8082
+    }
+  ]
+}
