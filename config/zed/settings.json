@@ -7,6 +7,12 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "agent": {
+    "favorite_models": [],
+    "model_parameters": [],
+    "terminal_init_command": ""
+  },
+  "show_whitespaces": "selection",
   "format_on_save": "off",
   "indent_guides": {
     "enabled": true
@@ -28,6 +34,11 @@
     "font_family": "MesloLGL Nerd Font Mono"
   },
   "tab_size": 2,
+  "languages": {
+    "Rust": {
+      "tab_size": 2
+    }
+  },
   "agent_servers": {
     "codex-acp": {
       "type": "registry"
@@ -43,5 +54,6 @@
     "mode": "system",
     "light": "One Light",
     "dark": "One Dark - Darkened"
-  }
+  },
+  "disable_ai": true
 }

@@ -174,5 +174,161 @@
     "unbind": {
       "ctrl-`": "terminal_panel::Toggle"
     }
+  },
+  {
+    "context": "VimControl && !menu",
+    "bindings": {
+      "ctrl-i": "pane::GoForward"
+    }
+  },
+  {
+    "context": "vim_mode == literal",
+    "bindings": {
+      "ctrl-i": [
+        "vim::Literal",
+        [
+          "ctrl-i",
+          "\t"
+        ]
+      ]
+    }
+  },
+  {
+    "context": "Editor",
+    "unbind": {
+      "alt-cmd-[": "editor::Fold"
+    }
+  },
+  {
+    "context": "ThreadsSidebar && !Editor",
+    "bindings": {
+      "ctrl-cmd-,": "editor::FoldAll"
+    }
+  },
+  {
+    "context": "ThreadsSidebar && !Editor",
+    "unbind": {
+      "z shift-m": "editor::FoldAll"
+    }
+  },
+  {
+    "context": "VimControl && !menu",
+    "bindings": {
+      "ctrl-cmd-,": "editor::FoldAll"
+    }
+  },
+  {
+    "context": "VimControl && !menu",
+    "unbind": {
+      "z shift-m": "editor::FoldAll"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-cmd-,": "editor::FoldAll"
+    }
+  },
+  {
+    "context": "Editor",
+    "unbind": {
+      "cmd-k cmd-0": "editor::FoldAll"
+    }
+  },
+  {
+    "context": "TextFinder || TextFinder > Picker > Editor || TextFinder > Picker > menu",
+    "bindings": {
+      "cmd-<": "text_finder::Fold"
+    }
+  },
+  {
+    "context": "TextFinder || TextFinder > Picker > Editor || TextFinder > Picker > menu",
+    "unbind": {
+      "alt-cmd-[": "text_finder::Fold"
+    }
+  },
+  {
+    "context": "ThreadsSidebar && !Editor",
+    "bindings": {
+      "ctrl-cmd-.": "editor::UnfoldAll"
+    }
+  },
+  {
+    "context": "ThreadsSidebar && !Editor",
+    "unbind": {
+      "z shift-r": "editor::UnfoldAll"
+    }
+  },
+  {
+    "context": "VimControl && !menu",
+    "bindings": {
+      "ctrl-cmd-.": "editor::UnfoldAll"
+    }
+  },
+  {
+    "context": "VimControl && !menu",
+    "unbind": {
+      "z shift-r": "editor::UnfoldAll"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-cmd-.": "editor::UnfoldAll"
+    }
+  },
+  {
+    "context": "Editor",
+    "unbind": {
+      "cmd-k cmd-j": "editor::UnfoldAll"
+    }
+  },
+  {
+    "context": "TextFinder || TextFinder > Picker > Editor || TextFinder > Picker > menu",
+    "bindings": {
+      "cmd->": "text_finder::Unfold"
+    }
+  },
+  {
+    "context": "TextFinder || TextFinder > Picker > Editor || TextFinder > Picker > menu",
+    "unbind": {
+      "alt-cmd-]": "text_finder::Unfold"
+    }
+  },
+  {
+    "context": "VimControl && !menu",
+    "bindings": {
+      "cmd->": "editor::UnfoldLines"
+    }
+  },
+  {
+    "context": "VimControl && !menu",
+    "unbind": {
+      "z o": "editor::UnfoldLines"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "cmd->": "editor::UnfoldLines"
+    }
+  },
+  {
+    "context": "Editor",
+    "unbind": {
+      "alt-cmd-]": "editor::UnfoldLines"
+    }
+  },
+  {
+    "context": "VimControl && !menu",
+    "bindings": {
+      "cmd-<": "editor::Fold"
+    }
+  },
+  {
+    "context": "VimControl && !menu",
+    "unbind": {
+      "z c": "editor::Fold"
+    }
   }
 ]
