@@ -20,14 +20,16 @@ end
 local function oled()
   for _, group in ipairs {
     "Normal", "NormalNC", "EndOfBuffer", "SignColumn", "StatusLine", "StatusLineNC",
+    "TabLine", "TabLineFill", "TabLineSel",
     "NvimTreeNormal", "NvimTreeNormalNC", "NvimTreeEndOfBuffer",
   } do
     local hl = vim.api.nvim_get_hl(0, { name = group, link = false })
     vim.api.nvim_set_hl(0, group, vim.tbl_extend("force", hl, { bg = BLACK }))
   end
 
-  for name, hl in pairs(vim.api.nvim_get_hl(0, {})) do
-    if (name:match "^St_" or name:match "^Tb") and not hl.link then
+  for name in pairs(vim.api.nvim_get_hl(0, {})) do
+    if name:match "^St_" or name:match "^Tb" then
+      local hl = vim.api.nvim_get_hl(0, { name = name, link = false })
       local new = vim.tbl_extend("force", {}, hl)
       if hl.bg and not is_dark(hl.bg) then
         -- colored block -> colored text
@@ -40,6 +42,12 @@ local function oled()
 end
 
 oled()
-vim.api.nvim_create_autocmd({ "VimEnter", "BufWinEnter", "ColorScheme", "FileType" }, {
+-- NvChad loads the tab bar's colors lazily (when a file opens), so re-apply
+-- on those events and once more shortly after startup.
+vim.api.nvim_create_autocmd({ "VimEnter", "BufAdd", "BufEnter", "BufWinEnter", "ColorScheme", "FileType" }, {
   callback = function() vim.schedule(oled) end,
+})
+vim.api.nvim_create_autocmd("User", {
+  pattern = "FilePost",
+  callback = function() vim.defer_fn(oled, 50) end,
 })

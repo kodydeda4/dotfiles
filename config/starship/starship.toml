@@ -1,0 +1,51 @@
+# minimal prompt (colors from ghostty's atom-one-dark-oled)
+#
+#   ~/Developer/kody main * 3s ❯
+#
+# folder, git branch + a status mark, how long the last command took (if > 2s),
+# then the prompt arrow on the same line: green normally, red after an error.
+
+"$schema" = "https://starship.rs/config-schema.json"
+
+add_newline = true
+format = "$directory$git_branch$git_state$git_status$cmd_duration$character"
+
+[directory]
+style = "#61afef"
+truncation_length = 3
+truncate_to_repo = false
+read_only = " ro"
+format = "[$path]($style)[$read_only]($read_only_style) "
+
+[git_branch]
+symbol = ""
+style = "#5c6370"
+format = "[$branch]($style) "
+
+[git_state]
+style = "#e5c07b"
+format = "[$state( $progress_current/$progress_total)]($style) "
+
+[git_status]
+style = "#e5c07b"
+format = "([$all_status$ahead_behind]($style) )"
+conflicted = "="
+ahead = "⇡"
+behind = "⇣"
+diverged = "⇕"
+untracked = "?"
+stashed = ""
+modified = "*"
+staged = "+"
+renamed = "»"
+deleted = "✘"
+
+[cmd_duration]
+min_time = 2000
+style = "#5c6370"
+format = "[$duration]($style) "
+
+[character]
+success_symbol = "[❯](#98c379)"
+error_symbol = "[❯](#e06c75)"
+vimcmd_symbol = "[❮](#98c379)"

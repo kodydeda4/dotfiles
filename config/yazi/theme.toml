@@ -19,6 +19,10 @@ prepend_dirs = [
 border_symbol = "│"
 border_style  = { fg = "#3b4261" }
 
+# square hover highlight (default ends are rounded)
+[indicator]
+padding = { open = "█", close = "█" }
+
 # minimal tabs: active tab is bright text, others dim; no pills or rounded ends
 [tabs]
 active    = { fg = "#61afef", bold = true }
