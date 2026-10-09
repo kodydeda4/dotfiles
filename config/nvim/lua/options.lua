@@ -7,10 +7,10 @@ require "nvchad.options"
 
 vim.o.cmdheight = 0 -- hide the command line row until it is needed
 
--- OLED look: pure black everywhere, including the statusline (St_*) and the
+-- OLED look: no background anywhere (transparent), including the statusline (St_*) and the
 -- buffer tabs (Tb*). Colored blocks become colored text on black.
 -- Re-applied after NvChad lazily loads plugin colors (nvim-tree, tabufline).
-local BLACK = 0x000000
+local BLACK = "NONE" -- transparent: let the terminal background (and its blur) show through
 
 local function is_dark(c)
   local r, g, b = bit.rshift(c, 16), bit.band(bit.rshift(c, 8), 0xff), bit.band(c, 0xff)

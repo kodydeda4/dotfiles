@@ -7,6 +7,7 @@ local M = {}
 
 M.base46 = {
 	theme = "tokyonight",
+	transparency = true,
 
 	-- pure black background (editor + side panels like nvim-tree)
 	changed_themes = {

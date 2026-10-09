@@ -4,6 +4,16 @@ return {
     lazy = false,
   },
 
+  -- lazygit in a floating window: <leader>lg (space l g)
+  {
+    "kdheepak/lazygit.nvim",
+    cmd = { "LazyGit", "LazyGitCurrentFile", "LazyGitFilter", "LazyGitFilterCurrentFile" },
+    dependencies = { "nvim-lua/plenary.nvim" },
+    keys = {
+      { "<leader>lg", "<cmd>LazyGit<cr>", desc = "LazyGit" },
+    },
+  },
+
   {
     "stevearc/conform.nvim",
     -- event = 'BufWritePre', -- uncomment for format on save
