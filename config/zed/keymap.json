@@ -178,7 +178,7 @@
   {
     "context": "VimControl && !menu",
     "bindings": {
-      "ctrl-i": "pane::GoForward"
+      "ctrl-cmd-l": "pane::GoForward"
     }
   },
   {
@@ -329,6 +329,35 @@
     "context": "VimControl && !menu",
     "unbind": {
       "z c": "editor::Fold"
+    }
+  },
+  {
+    "context": "VimControl && !menu",
+    "bindings": {
+      "ctrl-cmd-j": "editor::GoToDefinition"
+    }
+  },
+  {
+    "context": "VimControl && !menu",
+    "unbind": {
+      "g d": "editor::GoToDefinition"
+    }
+  },
+  {
+    "context": "VimControl && !menu",
+    "bindings": {
+      "ctrl-cmd-h": "pane::GoBack"
+    }
+  },
+  {
+    "context": "VimControl && !menu",
+    "unbind": {
+      "ctrl-o": "pane::GoBack"
+    }
+  },
+  {
+    "unbind": {
+      "ctrl-cmd-l": "lsp_tool::ToggleMenu"
     }
   }
 ]

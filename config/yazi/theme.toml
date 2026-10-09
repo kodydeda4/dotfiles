@@ -19,11 +19,6 @@ prepend_dirs = [
 border_symbol = "│"
 border_style  = { fg = "#3b4261" }
 
-[manager]
-border_symbol = "┃"
-# border_symbol = "│"
-border_style  = { fg = "#7aa2f7" }
-
 [status]
-separator_open  = ""
-separator_close = ""
+sep_left  = { open = "", close = "" }
+sep_right = { open = "", close = "" }

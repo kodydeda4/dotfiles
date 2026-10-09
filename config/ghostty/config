@@ -3,6 +3,7 @@
 #----------------------------------
 # theme = dark:oled-rose-pine,light:catppuccin-latte.conf
 theme = dark:atom-one-dark-oled.conf, light:catppuccin-latte.conf
+# theme = dark:TokyoNight, light:catppuccin-latte.conf
 # theme = dark:TokyoNight, light:TokyoNight Day
 
 font-family = MesloLGS NF
@@ -16,7 +17,8 @@ confirm-close-surface = false
 window-width = 100
 window-height = 30
 window-padding-x = 16
-window-padding-y = 0, 14
+window-padding-y = 0, 4
+window-padding-balance = true
 
 #----------------------------------
 # macOS specific features
@@ -27,6 +29,11 @@ macos-option-as-alt = true
 window-vsync = true
 window-colorspace = display-p3
 title = " "
+
+#----------------------------------
+# links: cmd+click opens urls
+#----------------------------------
+link-url = true
 
 #----------------------------------
 # keybindings

@@ -6,8 +6,24 @@
 local M = {}
 
 M.base46 = {
-	theme = "catppuccin",
-  transparency = true
+	theme = "tokyonight",
+
+	-- pure black background (editor + side panels like nvim-tree)
+	changed_themes = {
+		tokyonight = {
+			base_30 = {
+				black = "#000000",
+				darker_black = "#000000",
+			},
+		},
+	},
+}
+
+M.ui = {
+  statusline = {
+    -- no separator glyphs, just a space between sections (OLED: all black)
+    separator_style = { left = " ", right = " " },
+  },
 }
 
 return M
