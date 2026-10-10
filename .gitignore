@@ -9,3 +9,5 @@ config/mpd/mpd/state
 
 # Raycast-managed installed extension data (compiled JS, assets, binaries)
 config/raycast/extensions/
+# Raycast login token (secret)
+config/raycast/config.json
