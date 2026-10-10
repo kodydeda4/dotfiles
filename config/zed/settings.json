@@ -26,6 +26,10 @@
     "dock": "left"
   },
   "icon_theme": "Material Icon Theme",
+  "auto_install_extensions": {
+    "material-icon-theme": true,
+    "one-dark-darkened": true
+  },
   "markdown_preview": {
     "font_family": "SF Pro",
     "code_font_family": "SF Mono"

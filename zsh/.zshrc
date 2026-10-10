@@ -8,7 +8,9 @@
 #========================================================================
 
 # # pywal (cat ~/.cache/wal/sequences &) pfetch
-fastfetch --logo small
+# small apple on macOS, 3-line penguin on linux
+[[ $OSTYPE == linux* ]] && FF_LOGO=(--logo-type file --logo ~/.config/fastfetch/penguin.txt) || FF_LOGO=(--logo small)
+fastfetch $FF_LOGO
 #rich "$(gh api user -q .login) | switch with ghs" -p -a heavy
 
 # Github - Display Current
@@ -76,7 +78,7 @@ alias xmacrosOff="defaults write com.apple.dt.Xcode IDEPackageEnablePrebuilts NO
 alias gg="lazygit"
 alias wals="cd /Users/kodydeda/Library/Mobile\ Documents/com~apple~CloudDocs/Photos/Wallpapers; r"
 alias notes="cd /Users/kodydeda/Library/Mobile\ Documents/iCloud~md~obsidian/Documents/iCloud; nvim ."
-alias ff="clear && fastfetch --logo small"
+alias ff='clear && fastfetch $FF_LOGO'
 alias mm="~/.cargo/bin/rmpc"
 alias speed="speedtest-cli --simple"
 alias music="rmpc"
@@ -156,10 +158,13 @@ fi
 
 eval "$(starship init zsh)"
 export SPACESHIP_PROMPT_ASYNC=0
-eval "$(/opt/homebrew/bin/brew shellenv)"
-export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
-export PATH="/opt/homebrew/lib/ruby/gems/3.4.0/bin:$PATH"
-export PATH="/opt/homebrew/opt/rustup/bin:$HOME/.cargo/bin:$PATH"
+if [[ -x /opt/homebrew/bin/brew ]]; then
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+  export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
+  export PATH="/opt/homebrew/lib/ruby/gems/3.4.0/bin:$PATH"
+  export PATH="/opt/homebrew/opt/rustup/bin:$PATH"
+fi
+export PATH="$HOME/.cargo/bin:$PATH"
 
 #========================================================================
 # zoxide (must stay last)
